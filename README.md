@@ -13,7 +13,6 @@ cd ckeditor5-build-classic
 # install dependencies package
 npm install
 
-
 # develpoment env
 npm run dev
 
@@ -24,10 +23,49 @@ npm run build
 npm login
 npm publish
 
-
 ## sample  http://localhost:8080
 npm run server
+```
 
+## React Use
+
+```sh
+npm install @freeshine/ckeditor5-build-classic --save-dev
+```
+
+```jsx
+import React, { useEffect, useRef } from 'react'
+import ClassicEditor from '@freeshine/ckeditor5-build-classic'
+import './App.css'
+
+function App() {
+	const editorDom = useRef(null)
+	useEffect(() => {
+		ClassicEditor.create(editorDom.current, {
+			language: 'zh-cn'
+		})
+			.then(editor => {
+				window.editor = editor
+			})
+			.catch(err => {
+				console.error(err.stack)
+			})
+	}, [])
+
+	return (
+		<div className="App">
+			<div className="zlt-ckeditor5">
+				<textarea
+					className="zlt-editor"
+					style={{ display: 'none' }}
+					ref={editorDom}
+				/>
+			</div>
+		</div>
+	)
+}
+
+export default App
 ```
 
 [demo](https://freeshineit.github.io/ckeditor5-build-classic/)

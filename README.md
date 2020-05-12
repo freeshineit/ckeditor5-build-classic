@@ -68,6 +68,8 @@ function App() {
 export default App
 ```
 
+![toolbar](./image/toolbar.png)
+
 [demo](https://freeshineit.github.io/ckeditor5-build-classic/)
 
 [![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-build-classic.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-build-classic)

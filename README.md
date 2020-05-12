@@ -21,10 +21,12 @@ npm login
 npm publish
 
 
-## sample  http://localhost:8080/sample
+## sample  http://localhost:8080
 npm run server
 
 ```
+
+[demo]()
 
 [![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-build-classic.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-build-classic)
 [![Build Status](https://travis-ci.org/ckeditor/ckeditor5-build-classic.svg?branch=master)](https://travis-ci.org/ckeditor/ckeditor5-build-classic)

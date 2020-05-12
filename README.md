@@ -13,6 +13,10 @@ cd ckeditor5-build-classic
 # install dependencies package
 npm install
 
+
+# develpoment env
+npm run dev
+
 # webpack build production
 npm run build
 

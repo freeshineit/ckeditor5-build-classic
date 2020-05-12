@@ -32,12 +32,22 @@
 				href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html">custom
 				build</a> works fine.</p>
 	</div>
+	<div id='word-count'></div>
 
 	<script src="./dist/ckeditor.js"></script>
 	<script>
-		ClassicEditor.create(document.querySelector('#editor'))
+		ClassicEditor.create(document.querySelector('#editor'), {
+				// https://ckeditor.com/docs/ckeditor5/latest/features/image-upload/easy-image.html
+				cloudServices: {
+					// tokenUrl: 'https://example.com/cs-token-endpoint',
+					// uploadUrl: 'https://your-organization-id.cke-cs.com/easyimage/upload/'
+				}
+			})
 			.then(editor => {
 				window.editor = editor;
+				const wordCountPlugin = editor.plugins.get('WordCount');
+				const wordCountWrapper = document.getElementById('word-count');
+				wordCountWrapper.appendChild(wordCountPlugin.wordCountContainer);
 			})
 			.catch(error => {
 				console.error('There was a problem initializing the editor.', error);

@@ -16,9 +16,7 @@ const TerserPlugin = require('terser-webpack-plugin')
 module.exports = {
 	devtool: 'source-map',
 	performance: { hints: false },
-
 	entry: path.resolve(__dirname, 'src', 'ckeditor.js'),
-
 	output: {
 		// The name under which the editor will be exported.
 		library: 'ClassicEditor',
